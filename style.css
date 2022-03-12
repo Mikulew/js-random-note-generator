@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+  font-size: inherit;
+  font-family: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --color: #d8c21e;
+  --disabled: #8f853d;
+  --colorSecondary: #a80f5e;
+  --background: #111111;
+  --backgroundSecondary: #282828;
+  --borderRadius: 10px;
+  --animation: 0.3s ease;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  color: var(--color);
+  background-color: var(--background);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50vw;
+  height: 80vh;
+  border-radius: var(--borderRadius);
+  border: 2px solid var(--color);
+  background: var(--backgroundSecondary);
+}
+
+.container.hide {
+  display: none;
+}
+
+#app {
+  z-index: 1;
+}
+
+#settings {
+  z-index: 2;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.title-wrapper {
+  position: relative;
+}
+
+.title-wrapper,
+.action-wrapper {
+  flex-grow: 1;
+}
+
+.note-wrapper {
+  flex-grow: 5;
+}
+
+.form-wrapper {
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 6;
+}
+
+.title {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.note-tile {
+  display: grid;
+  place-items: center;
+  border-radius: var(--borderRadius);
+  border: 2px solid var(--color);
+  width: 200px;
+  height: 200px;
+}
+
+.note {
+  font-size: 30px;
+}
+
+.divider {
+  margin: 0 5px;
+}
+
+.icon {
+  position: absolute;
+  color: var(--color);
+  background: var(--backgroundSecondary);
+  right: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+}
+
+.icon:hover {
+  color: var(--background);
+  background: var(--color);
+  border-radius: var(--borderRadius);
+}
+
+.action-button {
+  padding: 20px 40px;
+  border-radius: var(--borderRadius);
+  border: none;
+  background: var(--color);
+  color: var(--background);
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.action-button[disabled] {
+  background: var(--disabled);
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 920px) and (min-width: 769px) {
+  .container {
+    width: 75vw;
+    height: 75vh;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95vw;
+    height: 95vh;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .icon {
+    right: 15px;
+  }
+}
