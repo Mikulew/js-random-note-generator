@@ -17,7 +17,7 @@
   <body>
     <section id="app" class="container">
       <div class="wrapper title-wrapper">
-        <h1 class="title">Random note generator</h1>
+        <h1 class="title">Note generator</h1>
         <button id="settingsButton" class="icon">
           <span>&#9881;</span>
         </button>
@@ -40,14 +40,26 @@
         </button>
       </section>
       <div class="wrapper form-wrapper">
-        <label for="convention">Naming convention:</label>
-        <select id="convention">
-          <option data-name-convention="EUROPEAN">European</option>
-          <option data-name-convention="USA">American</option>
-          <option data-name-convention="NEO_LATIN">Neo-Latin</option>
-          <option data-name-convention="INDIAN">Indian</option>
-          <option data-name-convention="JAPAN">Japan</option>
-        </select>
+        <div class="input-wrapper">
+          <label class="input-title" for="convention">Naming convention:</label>
+          <select class="select" id="convention">
+            <option class="option" value="EUROPEAN">
+              <span>European</span>
+            </option>
+            <option class="option" value="USA">
+              <span>American</span>
+            </option>
+            <option class="option" value="NEO_LATIN">
+              <span>Neo-Latin</span>
+            </option>
+            <option class="option" value="INDIAN">
+              <span>Indian</span>
+            </option>
+            <option class="option" value="JAPAN">
+              <span>Japan</span>
+            </option>
+          </select>
+        </div>
       </div>
       <div class="wrapper action-wrapper">
         <button id="save" class="action-button">save</button>

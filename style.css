@@ -143,6 +143,28 @@ body {
   cursor: not-allowed;
 }
 
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 75%;
+}
+
+.input-title {
+  font-size: 20px;
+}
+
+.select, .option {
+  padding: 5px;
+  border-radius: var(--borderRadius);
+  background: var(--color);
+}
+
+.option:hover, .option:active {
+  color: var(--color);
+  background: var(--background);
+}
+
 @media screen and (max-width: 920px) and (min-width: 769px) {
   .container {
     width: 75vw;
