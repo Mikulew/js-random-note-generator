@@ -1,3 +1,7 @@
+export const SETTINGS_OPTIONS = {
+  NAMING_CONVENTION: 'NAMING_CONVENTION',
+};
+
 export const NAMING_CONVENTION = {
   EUROPEAN: 'EUROPEAN',
   USA: 'USA',
@@ -12,4 +16,12 @@ export const CHROMATIC_SCALE = {
   [NAMING_CONVENTION.NEO_LATIN]: ['do', 'do♯/re♭', 're', 're#/mi♭', 'mi', 'fa', 'fa#/sol♭', 'sol', 'sol#/la♭', 'la', 'la#/si♭', 'si', 'si#/do♭', 'do'],
   [NAMING_CONVENTION.INDIAN]: ['সা', 'ঋ', 'রে', 'জ্ঞ', 'গ', 'ম', 'হ্ম', 'প', 'দ', 'ধ', 'ণ', 'নি'],
   [NAMING_CONVENTION.JAPAN]: ['ハ', '嬰ハ)/変ニ', 'ニ', '嬰ニ/変ホ', 'ホ', 'ヘ', '嬰へ/変ト', 'ト', '嬰ト/変イ', 'イ', '嬰イ/変ロ', 'ロ'],
+};
+
+export const DEFAULT_OPTIONS = {
+  [SETTINGS_OPTIONS.NAMING_CONVENTION]: `${NAMING_CONVENTION.EUROPEAN}`,
+};
+
+export const LOCAL_STORAGE_VALUES = {
+  [SETTINGS_OPTIONS.NAMING_CONVENTION]: 'namingConvention',
 };
